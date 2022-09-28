@@ -40,7 +40,7 @@ namespace DesafioFundamentos.Models
 
             // Pedir para o usuário digitar a placa e armazenar na variável placa
             // *IMPLEMENTE AQUI*
-            string placa = (Convert.ToString(Console.ReadLine().ToUpper()));
+            string placa = Console.ReadLine().ToUpper();
 
             // Verifica se o veículo existe
             if (veiculos.Any(x => x.ToUpper() == placa.ToUpper()))
@@ -51,9 +51,8 @@ namespace DesafioFundamentos.Models
                 // TODO: Realizar o seguinte cálculo: "precoInicial + precoPorHora * horas" para a variável valorTotal                
                 // *IMPLEMENTE AQUI*
                 int horas = Convert.ToInt32(Console.ReadLine());
-                decimal valorTotal = 0;
-                valorTotal = precoInicial + (precoPorHora * horas);
-
+                decimal valorTotal = valorTotal = precoInicial + (precoPorHora * horas);
+                
                 // TODO: Remover a placa digitada da lista de veículos
                 // *IMPLEMENTE AQUI*                
                 veiculos.Remove(placa);
